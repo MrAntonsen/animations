@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import '../../index.scss';
+html, body{
+  font-family: 'Langar', cursive;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%
+}
+.side-bar{
+  position: fixed;
+  display: flex;
+  padding: 5px;
+  overflow: auto;
+  flex-direction: row;
+  width: 30%;
+  height:100%;
+  background-color: map-get($primaryColorMap, "Primary");
+  justify-content: space-evenly;
+}
+.side-bar button{
+  font-family: 'Langar', cursive;
+  font-size: 1rem;
+  flex-basis: 33%;
+  height: 44px;
+  width: 185px;
+}

@@ -1,56 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import '../../index.scss';
 /* Container */
 .list-anim-container{
     font-family: 'Langar', cursive;
     border: 1px solid black;
     height:100vh;
     text-align: center;
-}
-/* UL */
-ul.list-anim-list{
-    background-size: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top:50%;
-    left: 50%;
-    list-style-type: none;
-    box-sizing: border-box;
-    min-width: 450px;
-    transform: translate(-50%,-50%);
-    
-}
-ul.list-anim-list li:first-child{
-    border-radius: 10px 10px 0px 0px;
-}
-ul.list-anim-list li:last-child{
-    border-radius: 10px 10px 0px 0px;
-}
-ul.list-anim-list li:last-child{
-    border-radius: 0px 0px 10px 10px;
-}
-/* List element */
-.list-anim-list-element{
-    border: 2px solid rgb(3, 62, 89);
-    color: rgb(3, 62, 89);
-    background: linear-gradient(13deg, rgb(110, 214, 255), rgb(235, 238, 236));
-    height: 53px;
-}
-.list-anim-list-element:hover{
+    /* UL */
+    .list-anim-list{
+        background-size: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top:50%;
+        left: 50%;
+        list-style-type: none;
+        box-sizing: border-box;
+        min-width: 450px;
+        transform: translate(0, -50%);
+        /* List element */
+        .list-anim-list-element{
+            border: 2px solid rgb(3, 62, 89);
+            color: rgb(3, 62, 89);
+            background: linear-gradient(13deg, rgb(110, 214, 255), rgb(235, 238, 236));
+            height: 53px;
+            &:first-child{
+                border-radius: 10px 10px 0px 0px;
+            }
+            &:last-child{
+                border-radius: 10px 10px 0px 0px;
+            }
+            &:last-child{
+                border-radius: 0px 0px 10px 10px;
+            }
+            & .list-anim-text{
+                display: flex;
+                justify-content: space-between;
 
+            }
+            .List-fontawesome-X{
+                transform: scale(1);
+            }
+        }
+    }
 }
+
 ul.list-anim-list li span.list-anim-text{
-    display: flex;
-    justify-content: space-between;
 }
 /* X - fontawesome */
 ul.list-anim-list li span.list-anim-text:last-child{
     padding: 15px 10px;
     cursor: pointer;
-}
-.List-fontawesome-X{
-    transform: scale(1);
-}
+}   
 .List-fontawesome-X:hover
 {
     animation-name: XbuttonRotateScaleUp, doubleSize, XbuttonRotate;
@@ -62,7 +63,7 @@ ul.list-anim-list li span.list-anim-text:last-child{
  }
  .deleteFadeAwayClass{
     animation-name: deleteFadeAway;
-    animation-duration: 5100ms;
+    animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     animation-iteration-count: 1;
  }
@@ -113,8 +114,9 @@ ul.list-anim-list li span.list-anim-text:last-child{
     }
     100%{
         position:relative;
-        left: -1500px;
+        left: -650px;
         display:none;
+        opacity: 0;
     }
 }
 @keyframes listElemGoDown{
